@@ -2,7 +2,6 @@ aiodns==2.0.0
 aiohttp==3.7.4.post0
 alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
 altgraph==0.17
-anaconda-client==1.7.2
 anaconda-navigator==2.0.3
 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1621348054992/work
 anyio @ file:///C:/ci/anyio_1620153418380/work/dist
