@@ -1,6 +1,4 @@
-import sys
 import pyupbit
-import time
 import requests
 import threading
 
