@@ -1,12 +1,8 @@
 import sys
-from PyQt5.QtWidgets import *
-from PyQt5 import uic
-from PyQt5.QtCore import *
 import pyupbit
 import time
 import requests
 import threading
-# form pandas import DataFrame
 
 def bull_market(ticker):
     try:
@@ -34,16 +30,6 @@ def bull_market(ticker):
 
     except:
         return None, None
-
-    # df = pyupbit.get_ohlcv(ticker)
-    # ma5 = df['close'].rolling(5).mean()
-    # last_ma5 = ma5[-2]
-    # cur_price = pyupbit.get_current_price(ticker)
-    #
-    # if cur_price > last_ma5:
-    #     return True
-    # else:
-    #     return False
 
 def post_message(token, channel, text):
     response = requests.post("https://slack.com/api/chat.postMessage",
