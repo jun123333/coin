@@ -19,8 +19,8 @@ def bull_market(ticker):
 
         price = pyupbit.get_current_price(ticker)
 
-
-        if price > last_ma5 > last_ma20 and price > last_ma5_hour > last_ma20_hour:
+        # > last_ma20 and price > last_ma5_hour > last_ma20_hour
+        if price > last_ma5:
             return True
         else:
             return False
