@@ -19,8 +19,8 @@ def bull_market(ticker):
 
         price = pyupbit.get_current_price(ticker)
 
-        # > last_ma20 and price > last_ma5_hour > last_ma20_hour
-        if price > last_ma5:
+        #
+        if price > last_ma5 > last_ma20 and price > last_ma5_hour > last_ma20_hour:
             return True
         else:
             return False
@@ -37,7 +37,7 @@ def post_message(token, channel, text):
     print(response)
 
 
-myToken = "xoxb-2186286485602-2198982877889-hUFS54MwkG4c7aPBUS1Eq7g9"
+myToken = "xoxb-2202350919413-2205393158722-VAbPIkpwKzcT7IiBi7uLODFL"
 
 
 tickers = pyupbit.get_tickers(fiat="KRW")
@@ -46,7 +46,7 @@ def printhello():
     for ticker in tickers:
         is_bull = bull_market(ticker)
         if is_bull:
-            print(ticker, " 상승장",post_message(myToken, "#코인", "상승중" +ticker))
+            print(ticker, " 상승장",post_message(myToken, "#coinworld", "상승중" +ticker))
 
         else:
             print(ticker, " 하락장")
